@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.1.0", 
+    "version": "1.1.0",
     "title": "Manager app backend",
     "description": "Manager Application API",
     "license": "ISC"
@@ -66,10 +66,10 @@
               "properties": {
                 "login": {
                   "type": "string"
-                },       
+                },
                 "password": {
                   "type": "string"
-                }       
+                }
               },
               "example": {
                 "login": "IMask",
@@ -86,7 +86,7 @@
               "properties": {
                 "token": {
                   "type": "string"
-                }      
+                }
               }
             }
           },
@@ -127,10 +127,10 @@
                 },
                 "login": {
                   "type": "string"
-                },       
+                },
                 "password": {
                   "type": "string"
-                }       
+                }
               },
               "example": {
                 "name": "Ilon Mask",
@@ -138,7 +138,6 @@
                 "password": "Tesla4ever"
               }
             }
-            
           }
         ],
         "produces": ["application/json"],
@@ -152,7 +151,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "409": {
@@ -182,12 +181,12 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/User"
-              } 
+              }
             }
           }
         }
       }
-    },    
+    },
     "/users/{userId}": {
       "get": {
         "security": [
@@ -257,10 +256,10 @@
                 },
                 "login": {
                   "type": "string"
-                },       
+                },
                 "password": {
                   "type": "string"
-                }       
+                }
               },
               "example": {
                 "name": "Ilon Mask",
@@ -268,7 +267,6 @@
                 "password": "Tesla4ever"
               }
             }
-            
           }
         ],
         "responses": {
@@ -281,7 +279,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "409": {
@@ -339,7 +337,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Board"
-              } 
+              }
             }
           }
         }
@@ -362,7 +360,6 @@
             "schema": {
               "required": [
                 "title",
-                "description",
                 "owner",
                 "users"
               ],
@@ -380,11 +377,10 @@
                   "type": "array",
                   "items": {
                     "type": "string"
-                  } 
-                }       
+                  }
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -397,12 +393,12 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
       }
-    },    
+    },
     "/boards/{boardId}": {
       "get": {
         "security": [
@@ -463,7 +459,6 @@
             "schema": {
               "required": [
                 "title",
-                "description",
                 "owner",
                 "users"
               ],
@@ -481,11 +476,10 @@
                   "type": "array",
                   "items": {
                     "type": "string"
-                  } 
-                }       
+                  }
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -498,7 +492,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -562,12 +556,12 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Board"
-              } 
+              }
             }
           }
         }
       }
-    }  ,
+    },
     "/boardsSet/{userId}": {
       "get": {
         "security": [
@@ -595,7 +589,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Board"
-              } 
+              }
             }
           }
         }
@@ -628,7 +622,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Column"
-              } 
+              }
             }
           }
         }
@@ -666,10 +660,9 @@
                 },
                 "order": {
                   "type": "number"
-                }      
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -682,12 +675,12 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
       }
-    },    
+    },
     "/boards/{boardId}/columns/{columnId}": {
       "get": {
         "security": [
@@ -754,7 +747,7 @@
             "description": "Column ID",
             "required": true,
             "type": "string"
-          },          
+          },
           {
             "name": "new Column params",
             "in": "body",
@@ -770,10 +763,9 @@
                 },
                 "order": {
                   "type": "number"
-                }       
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -786,7 +778,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -862,7 +854,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Column"
-              } 
+              }
             }
           }
         }
@@ -895,9 +887,9 @@
                 },
                 "order": {
                   "type": "number"
-                }      
+                }
               }
-            }            
+            }
           }
         ],
         "responses": {
@@ -913,7 +905,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -949,8 +941,8 @@
                   "type": "number"
                 },
                 "boardId": {
-                  "type": "string" 
-                }       
+                  "type": "string"
+                }
               }
             }
           }
@@ -968,7 +960,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1008,7 +1000,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Task"
-              } 
+              }
             }
           }
         }
@@ -1067,11 +1059,10 @@
                   "type": "array",
                   "items": {
                     "type": "string"
-                  } 
-                }       
+                  }
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -1084,12 +1075,12 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
       }
-    },    
+    },
     "/boards/{boardId}/columns/{columnId}/tasks/{taskId}": {
       "get": {
         "security": [
@@ -1204,11 +1195,10 @@
                   "type": "array",
                   "items": {
                     "type": "string"
-                  } 
-                }       
+                  }
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -1221,7 +1211,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1310,7 +1300,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Task"
-              } 
+              }
             }
           }
         }
@@ -1344,12 +1334,12 @@
                 },
                 "order": {
                   "type": "number"
-                },      
+                },
                 "columnId": {
                   "type": "string"
-                }      
+                }
               }
-            }            
+            }
           }
         ],
         "responses": {
@@ -1365,7 +1355,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1398,7 +1388,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Task"
-              } 
+              }
             }
           }
         }
@@ -1445,7 +1435,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/File"
-              } 
+              }
             }
           }
         }
@@ -1467,21 +1457,18 @@
             "in": "formData",
             "description": "Board Id",
             "type": "string"
-            
           },
           {
             "name": "taskId",
             "in": "formData",
             "description": "Task Id",
             "type": "string"
-            
           },
           {
             "name": "file",
             "in": "formData",
             "description": "File to upload",
             "type": "file"
-            
           }
         ],
         "responses": {
@@ -1497,13 +1484,13 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "402": {
             "description": "File already exist",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1536,7 +1523,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/File"
-              } 
+              }
             }
           }
         }
@@ -1607,7 +1594,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Point"
-              } 
+              }
             }
           }
         }
@@ -1637,19 +1624,18 @@
               "properties": {
                 "title": {
                   "type": "string"
-                },     
+                },
                 "taskId": {
                   "type": "string"
-                },     
+                },
                 "boardId": {
                   "type": "string"
-                },     
+                },
                 "done": {
                   "type": "boolean"
-                }    
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -1662,13 +1648,13 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "402": {
             "description": "File already exist",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1701,9 +1687,9 @@
                 },
                 "done": {
                   "type": "boolean"
-                }      
+                }
               }
-            }            
+            }
           }
         ],
         "responses": {
@@ -1716,13 +1702,13 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "402": {
             "description": "File already exist",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1755,7 +1741,7 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Point"
-              } 
+              }
             }
           }
         }
@@ -1779,7 +1765,7 @@
             "description": "Point ID",
             "required": true,
             "type": "string"
-          },         
+          },
           {
             "name": "new params",
             "in": "body",
@@ -1795,10 +1781,9 @@
                 },
                 "done": {
                   "type": "boolean"
-                }       
+                }
               }
             }
-            
           }
         ],
         "responses": {
@@ -1811,7 +1796,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"              
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -1862,14 +1847,13 @@
         },
         "login": {
           "type": "string"
-        }      
+        }
       }
     },
     "Board": {
       "required": [
         "_id",
         "title",
-        "description",
         "owner",
         "users"
       ],
@@ -1890,8 +1874,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          } 
-        }      
+          }
+        }
       },
       "example": {
         "_id": "Board id",
@@ -1923,7 +1907,7 @@
         },
         "boardId": {
           "type": "string"
-        }      
+        }
       },
       "example": {
         "_id": "Column id",
@@ -1969,8 +1953,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          } 
-        }       
+          }
+        }
       },
       "example": {
         "_id": "Task id",
@@ -2009,7 +1993,7 @@
         },
         "path": {
           "type": "string"
-        }    
+        }
       },
       "example": {
         "_id": "File id",
@@ -2039,10 +2023,10 @@
         },
         "boardId": {
           "type": "string"
-        },   
+        },
         "done": {
           "type": "boolean"
-        }      
+        }
       },
       "example": {
         "_id": "Point id",
@@ -2063,7 +2047,7 @@
         },
         "message": {
           "type": "string"
-        }     
+        }
       },
       "example": {
         "statusCode": "4xx",
