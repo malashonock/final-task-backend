@@ -1038,7 +1038,6 @@
               "required": [
                 "title",
                 "order",
-                "description",
                 "userId",
                 "users"
               ],
@@ -1170,7 +1169,6 @@
               "required": [
                 "title",
                 "order",
-                "description",
                 "columnId",
                 "userId",
                 "users"
@@ -1923,7 +1921,6 @@
         "order",
         "boardId",
         "columnId",
-        "description",
         "userId",
         "users"
       ],
